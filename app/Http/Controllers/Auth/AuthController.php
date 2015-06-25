@@ -22,6 +22,8 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers;
 
+    protected $redirectPath = '/';
+
     /**
      * Create a new authentication controller instance.
      *
@@ -61,4 +63,5 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
 }
